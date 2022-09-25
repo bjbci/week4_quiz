@@ -7,34 +7,35 @@
     <title>Quiz homework</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
-<body class="whole-body">
-<header class= "background">
-    
 
-    <p>big boii</p>      
+<body>
 
-    
-
-
-<!--highScore-->
-
-
+  <header>
+    <section>   
+    <div class="high-score boxes">
+    <p>highScore</p>
+    </div>
+    </section>
 <!--timer- countdown-->
+    <section>
+        <div class="timer-box boxes">
 
-<div id="timer-box">
     <h1>You have 2 minutes</h1>
 
-<button onclick="startTest()">Start Test</button>
+        <button onclick="startTest">
+            Start Test</button>
+        <h3>newCount</h3>
+        <h2 id="counterseconds"></h2>
 
+        <p>this is below the timer</p>
 
-<p>this is below the timer</p>
-</div>
-
-</header>
+        </div>
+    </section>
+</header>  
 
 <!--start button-->
-        <main>
-
+<main>
+<section class="question-card">
 <!--questions 1-10
 1. You can include JavaScript on an HTML page if it is written between:
 Script tags
@@ -95,7 +96,7 @@ An exercise in futility
 Gonna be a couple days late
 A lot of redundant code
 
-
+section>
 
 
 
@@ -111,8 +112,11 @@ A lot of redundant code
 
 
 <!--enter initials into submit box-->
+</section>
+<footer class="footer">
 
+</footer>
 <script src="./script.js"></script>
-        </main>
-    </body>
+ </main>
+</body>
 </html>  
