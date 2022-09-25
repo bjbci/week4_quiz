@@ -1,3 +1,9 @@
+*{
+    box-sizing:border-box;
+}
+
+
+
 .whole-body{
     background-color:antiquewhite;
     color:black;
@@ -5,19 +11,52 @@
 }
 
 
-.background{
-    
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+  
+   
+  padding: 10px;
     background-color:blue;
     height: 300px;
     color: rgb(223, 25, 25);
     font-size:20px;
 }
-
-#timer-box{
-    text-align: center;
+.high-score{
+    
     height:250px;
     width:300px;
     color:black;
-    background-color:bisque;
+    background-color:rgb(196, 255, 211);
+    border:10px, solid, black;  
+}
+.timer-box{
+    
+    
+    height:250px;
+    width:300px;
+    color:black;
+    background-color:rgb(196, 255, 211);
     border:10px, solid, black;
+}
+
+.question-card{
+  
+  margin-top: 20px;
+  margin-bottom:20px;
+  margin-left: 250px;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;             
+    width:50%;
+    height:400px;
+    background-color:coral;
+    color:blueviolet;
+}
+.footer{
+    background-color:darkgrey;
+    height:100px;
 }
