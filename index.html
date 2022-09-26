@@ -15,7 +15,7 @@
     <div class="high-score boxes">
      <div class="score" >
         <span id="user-score">0</span>
-        <span id="high-score">/ 3</span>
+        <span id="high-score">/10</span>
      </div>
     </div>
     </section>
@@ -25,11 +25,11 @@
 
          <h1>You have 2 minutes</h1>
 
-         <button id="button" onclick="counter()">
+         <button  class="button" onclick=startTest()><!--//class="button"-->
             Start Test</button>
-         <h3>Seconds Remaining</h3>
+         <h3>newCount</h3>    <!--//the JS seconds countdown varaible-->
          <h2 id="counterseconds"></h2>
-
+         <!--// here is counter.appendChild(h2)//-->
          <p>this is below the timer</p>
 
         </div>
@@ -38,114 +38,45 @@
 
 
 <main>
+    <div id="container"></div>
+    <div id="start">Start Quiz</div>
+    <div id="quiz" style="display:none;">
+        <div id="question">
+            <p>question</p>
+        </div>
+        <div id="timer">
+            //<div id="counter">6</div>
+        <!--</div id="bTimeGuage"></div>-->
+        <!--</div>-->
+        <div id="options">
+            <div class="option" id="A" onclick="checkAnswer('A')">A</div>
+            <div class="option" id="B" onclick="checkAnswer('B')">B</div>
+            <div class="option" id="C" onclick="checkAnswer('C')">C</div>
+            <div class="option" id="D" onclick="checkAnswer('D')">D</div>
+        </div>
+    </div>
+</div>
+<div id="scoreContainer"></div>
+
+
+
     <section class="content">
     <div  id="question-box">abcd
     </div id="question-text"></div>
     <div class="ABCD">
-        <button id="button button-option button-a true" onclick="correctAnswer">A</button>
-        <button id="button button-option button-b flase" onclick="incorrectAnswer1">B</button>
-        <button id="button button-option button-c false" onclick="incorrectAnswer2">C</button>
-        <button id="button button-option button-d false" onclick="incorrectAnswer3">D</button>
+        <button class="button" id=" button-option button-a" onclick="correctAnswer">A</button>
+        <button class="button" id=" button-option button-b" onclick="incorrectAnswer1">B</button>
+        <button class="button" id=" button-option button-c" onclick="incorrectAnswer2">C</button>
+        <button class="button" id=" button-option button-d" onclick="incorrectAnswer3">D</button>
     </div>
 </div>
 
 <div class="controls">
-    <button id="button button-restart restart">RESTART</button>
-    <button id="button button-submit submit">SUBMIT</button>
+    <button class="button" id=" button-restart restart">RESTART</button>
+    <button class="button" id=" button-submit submit">SUBMIT</button>
 </div>
 </div>
 </section>
-<!-- <section class="question-card">
-
-    <label id="text-box">QUESTION WILL GO HERE</label>
-
-    <button id="button button-1" onclick="correctAnswer">SPACESAVER</button>
-    <button id="button button-2" onclick="incorrectAnswer1">SPACESAVER</button>
-    <button id="button button-3" onclick="incorrectAnswer2">SPACESAVER</button>
-    <button id="button button-4" onclick="incorrectAnswer3">SPACESAVER</button> -->
- <!-- var   Question1={
-        q?:"You can include JavaScript on an HTML page if it is written between:",
-
-        correct-answer:"Script tags",
-        incorrect-answer1:"Two pieces of rye bread",
-        incorrect-answer2:"Commercial breaks",
-        incorrect-answer3:"The lines",
-    }
-    var   Question2={ 
-        q?: "A boolean is what kind of data type? ",
-        correct-answer:"Primitive",
-        incorrect-answer1:"Obscure",
-        incorrect-answer2:"Obtuse",
-        incorrect-answer3:"Primavera,
-    }   
-var   Question3={ 
-    q?: "An oject is a data type that is a collection of: ",
-
-    correct-answer:"Properties",
-    incorrect-answer1:"Railroads",
-    incorrect-answer2:"Utilities",
-    incorrect-answer3:"Sea shells",
-}
-var   Question4={
-    q?: "Use this type of operator to determine if a number is odd or even: ",
-
-    correct-answer:"modulus",
-    incorrect-answer1:"smooth",
-    incorrect-answer2:"telephone",
-    incorrect-answer3:"surgeon",
-}
-var   Question5={ 
-    q?: "Use this method to determine the length of an array: ",
-    correct-answer:"length",
-    incorrect-answer1:"yardstick",
-    incorrect-answer2:"your arm",
-    incorrect-answer3:"emake an educated guess",
-}
-var   Question6={ 
-    q?: "What captues a chunk of code to be reused in a program?",
-    correct-answer:"function",
-    incorrect-answer1:"butterfly net",
-    incorrect-answer2:"federal marshall",
-    incorrect-answer3:"print screen",
-}
-var   Question7={ 
-    q?: "When writing an object, be careful not to forget the:",
-    correct-answer:"commas",
-    incorrect-answer1:"tickets",
-    incorrect-answer2:"keys",
-    incorrect-answer3:"to lock the door",
-}
-var   Question8={ 
-    q?: "Which is the highest level of an objet? ",
-    correct-answer:"window",
-    incorrect-answer1:"penthouse",
-    incorrect-answer2:"CEO",
-    incorrect-answer3:"stratosphere",
-}
-var   Question9={ 
-    q?: "An API is what? ",
-    correct-answer:"Aplication Programming Interface",
-    incorrect-answer1:"Any Possible Idea",
-    incorrect-answer2:"All Purple Igloos",
-    incorrect-answer3:"Artfully Placed Item",
-}
-var   Question10={ 
-    q?: "Week 4 homework is: ",
-    correct-answer:"A Valuable learning experience",
-    incorrect-answer1:"An exercise in futility",
-    incorrect-answer2:"Gonna be a couple days late",
-    incorrect-answer3:"A lot of redundant code",
-}
-section> -->
-
-
-
-
-
-
-
-<!--all done final highScore-->
-
 
 
 
