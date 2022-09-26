@@ -13,31 +13,57 @@
   <header>
     <section>   
     <div class="high-score boxes">
-    <p>highScore</p>
+     <div class="score" >
+        <span id="user-score">0</span>
+        <span id="high-score">/ 3</span>
+     </div>
     </div>
     </section>
 <!--timer- countdown-->
     <section>
         <div class="timer-box boxes">
 
-    <h1>You have 2 minutes</h1>
+         <h1>You have 2 minutes</h1>
 
-        <button onclick="startTest">
+         <button id="button" onclick="counter()">
             Start Test</button>
-        <h3>Seconds Remaining</h3>
-        <h2 id="counterseconds"></h2>
+         <h3>Seconds Remaining</h3>
+         <h2 id="counterseconds"></h2>
 
-        <p>this is below the timer</p>
+         <p>this is below the timer</p>
 
         </div>
     </section>
 </header>  
 
-<!--start button-->
-<main>
-<section class="question-card">
 
- var   Question1={
+<main>
+    <section class="content">
+    <div  id="question-box">abcd
+    </div id="question-text"></div>
+    <div class="ABCD">
+        <button id="button button-option button-a true" onclick="correctAnswer">A</button>
+        <button id="button button-option button-b flase" onclick="incorrectAnswer1">B</button>
+        <button id="button button-option button-c false" onclick="incorrectAnswer2">C</button>
+        <button id="button button-option button-d false" onclick="incorrectAnswer3">D</button>
+    </div>
+</div>
+
+<div class="controls">
+    <button id="button button-restart restart">RESTART</button>
+    <button id="button button-submit submit">SUBMIT</button>
+</div>
+</div>
+</section>
+<!-- <section class="question-card">
+
+    <label id="text-box">QUESTION WILL GO HERE</label>
+
+    <button id="button button-1" onclick="correctAnswer">SPACESAVER</button>
+    <button id="button button-2" onclick="incorrectAnswer1">SPACESAVER</button>
+    <button id="button button-3" onclick="incorrectAnswer2">SPACESAVER</button>
+    <button id="button button-4" onclick="incorrectAnswer3">SPACESAVER</button> -->
+ <!-- var   Question1={
         q?:"You can include JavaScript on an HTML page if it is written between:",
 
         correct-answer:"Script tags",
@@ -110,7 +136,7 @@ var   Question10={
     incorrect-answer2:"Gonna be a couple days late",
     incorrect-answer3:"A lot of redundant code",
 }
-section>
+section> -->
 
 
 
