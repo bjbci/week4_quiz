@@ -13,12 +13,10 @@
 }
 
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
-  
+.flex-container{
+    display:flex;
+    flex-flow: row-wrap;
+    justify-content:space-between;
    
   padding: 10px;
     background-color:blue;
@@ -26,7 +24,7 @@ header{
     color: rgb(223, 25, 25);
     font-size:20px;
 }
-.high-score{
+.high-score-box{
     
     height:250px;
     width:300px;
@@ -71,10 +69,10 @@ button{
     display: inline-block;
     font-size: 16px;
 }
-.button:hover{
+/*.button:hover{
     color:black;
     padding:10px;
-}
+}*/
 .footer{
     background-color:darkgrey;
     height:100px;
@@ -88,8 +86,8 @@ button{
     border:10px, solid, black;
 }
 #question-box{
-    height:200px;
-    width:250px;
+    height:60%;
+    width:60%;
     color:black;
     background-color:rgb(196, 255, 211);
     border:10px, solid, black;
