@@ -11,69 +11,96 @@
 <body>
 
   <header>
-    <section>   
-    <div class="high-score boxes">
-     <div class="score" >
-        <span id="user-score">0</span>
-        <span id="high-score">/10</span>
-     </div>
-    </div>
-    </section>
-<!--timer- countdown-->
-    <section>
-        <div class="timer-box boxes">
-
-         <h1>You have 2 minutes</h1>
-
-         <button  class="button" onclick=startTest()><!--//class="button"-->
-            Start Test</button>
-         <h3>newCount</h3>    <!--//the JS seconds countdown varaible-->
-         <h2 id="counterseconds"></h2>
-         <!--// here is counter.appendChild(h2)//-->
-         <p>this is below the timer</p>
-
+    <div class="flex-container">
+    
+        <div class="high-score-box">
+            <h1>HIGH SCORE</h1>
         </div>
-    </section>
-</header>  
+       
+      
+    
+        <div class="timer-box">
+            <h1>You have 2 minutes</h1>
+           
+            <h2 id="counterseconds"></h2>
+            <h3>timerCount</h3>
+            <p>this is below the timer</p>
+        </div>
+    
+    
+    
+    </div>
+</header>
 
 
 <main>
-    <div id="container"></div>
-    <div id="start">Start Quiz</div>
+
+
+
+
+
+<section class="page1">
+    <span id="user-score">0</span>
+    <div id="container">
+        
+ 
+</section>
+
+
+<div class="page2">
     <div id="quiz" style="display:none;">
         <div id="question">
-            <p>question</p>
+            <p>questions</p>
         </div>
+
         <div id="timer">
-            //<div id="counter">6</div>
-        <!--</div id="bTimeGuage"></div>-->
-        <!--</div>-->
+            <div id="counter">6</div>
+       
         <div id="options">
-            <div class="option" id="A" onclick="checkAnswer('A')">A</div>
-            <div class="option" id="B" onclick="checkAnswer('B')">B</div>
-            <div class="option" id="C" onclick="checkAnswer('C')">C</div>
-            <div class="option" id="D" onclick="checkAnswer('D')">D</div>
+            <div class="option" id="btnA">A</div>
+            <div class="option" id="btnB">B</div>
+            <div class="option" id="btnC">C</div>
+            <div class="option" id="btnD">D</div>
         </div>
     </div>
 </div>
+</div>
+
+<section class="page3">
 <div id="scoreContainer"></div>
-
-
+<h1> ALL DONE! </h1>
+<div id="scoreBox">
+<h2 > FINAL SCORE id="scoreBox"   </h2> 
+</div>
+</section>
 
     <section class="content">
     <div  id="question-box">abcd
     </div id="question-text"></div>
     <div class="ABCD">
-        <button class="button" id=" button-option button-a" onclick="correctAnswer">A</button>
-        <button class="button" id=" button-option button-b" onclick="incorrectAnswer1">B</button>
-        <button class="button" id=" button-option button-c" onclick="incorrectAnswer2">C</button>
-        <button class="button" id=" button-option button-d" onclick="incorrectAnswer3">D</button>
+        
+
+        <button type="button" id="btnStart">Start Test</button>
+    <div id="start">Start Quiz</div>
+</div>
+    <div>
+        <button type="button"id="btnA" onclick="buttonA()"></button>
+    
+        <button type="button"id="btnB"  onclick="buttonB()">answerB</button>
+    
+        <button type="button"id="btnD" onclick="buttonC()">answerC</button>
+    
+        <button type="button"id="btnD"  onclick="buttonD()" >answerD</button>
     </div>
+</div>
+</div>
 </div>
 
 <div class="controls">
-    <button class="button" id=" button-restart restart">RESTART</button>
-    <button class="button" id=" button-submit submit">SUBMIT</button>
+    <button type="button" onclick="buttonReStart()" id="btnReStart">RESTART</button>
+    <button type="button" onclick="buttonSubmit()" id="btnSubmit">SUBMIT</button>
+    <button type="button" onclick="buttonClearScreen()" id="btnClrScr">CLEAR SCREEN</button>
+    
 </div>
 </div>
 </section>
