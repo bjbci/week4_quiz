@@ -84,43 +84,21 @@ function startQuiz() {
   runQuestions()
   startTimer()
 }
-function runQuestions(ques1,ques2,ques3,ques4,ques5,ques6,ques7,ques8,ques9,ques10){
+
     
 
-var ques1TextParent=document.getElementById("question-box")//parent Element
-var ques1TextChild=document.createElement('h2')//child element Created
-console.log(ques1TextParent)
-console.log(ques1TextChild)
-ques1TextParent.innerText=" i am decidus maximus"//use a variable
-
-var btnATextParent=document.getElementById("btnA")//parent element
-var btnATextChild=document.createElement('h2')
-console.log(btnATextParent)
-btnATextChild.innerText= answerA
-btnATextChild.appendChild(btnATextParent)
-
-var btnBText=document.getElementById("btnB")
-console.log(btnBText)
-btnBText.innerText= answerB
-
-var btnCText=document.getElementById("btnC")
-console.log(btnCText)
-btnCText.innerText= answerC
-
-var btnDText=document.getElementById("btnD")
-console.log(btnDText)
-btnDText.innerText= answerD
 
 
 
 
-}
+
+
 
 var timerEl=document.getElementById("counterseconds")
 console.log(timerEl)
 
 var newCountDisplay=document.createElement('h3')
- newCountDisplay.innerText= timerCount
+newCountDisplay.innerText= timerCount
 console.log(newCountDisplay)
 //newCountDisplay.innerText= timerCount
 //The setTimer function starts and stops the timer and triggers winGame() and loseGame()
@@ -133,188 +111,235 @@ function startTimer() {
     if (timerCount === 0) {
       clearInterval(timer)
     }// Tests if win condition is met
-      //if (isWin && timerCount ===12 ) {
-        // Clears interval and stops timer
-        //clearInterval(timer);
-       // winGame()
+    //if (isWin && timerCount ===12 ) {
+      // Clears interval and stops timer
+      //clearInterval(timer);
+      // winGame()
     } ,1000)
-       //clearInterval(timer)
-      
-      //clearInterval(timer)
-    }
-//////////////////////////////////////////////////////////////////
-// Arrays used to create blanks and letters on screen
-var correctAnswers = [];
-
-
-// Array of words the user will guess
-var options= ["A","B", "C", "D",];
-
-// The init function is called when the page loads 
-function init() {
-  getWins();
-  getlosses();
-}
-
-// The startGame function is called when the start button is clicked
-function startGame() {
-  isWin = false;
-  timerCount = 10;
-  // Prevents start button from being clicked when round is in progress
-  startButton.disabled = true;
-  renderBlanks()
-  startTimer()
-}
-
-// The winGame function is called when the win condition is met
-function winGame() {
-  wordBlank.textContent = "YOU WON!!!🏆 ";
-  winCounter++
-  startButton.disabled = false;
-  setWins()
-}
-
-// The loseGame function is called when timer reaches 0
-function loseGame() {
-  wordBlank.textContent = "GAME OVER";
-  loseCounter++
-  startButton.disabled = false;
-  setLosses()
-}
-
-// // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
-// function startTimer() {
-//   // Sets timer
-//   timer = setInterval(function() {
-//     timerCount--;
-//     timerElement.textContent = timerCount;
-//     if (timerCount >= 0) {
-//       // Tests if win condition is met
-//       if (isWin && timerCount > 0) {
-//         // Clears interval and stops timer
-//         clearInterval(timer);
-//         winGame();
-//       }
-//     }
-//     // Tests if time has run out
-//     if (timerCount === 0) {
-//       // Clears interval
-//       clearInterval(timer);
-//       loseGame();
-//     }
-//   }, 1000);
-// }
-
-
-
-
-//////////////////////////////////////////////////////////
-
-
-
- 
- 
-
-
-
- 
-
-// let objectQuestions=[
-//     {
-//     question:"You can include JavaScript on an HTML page if it is written between:",
+    //clearInterval(timer)
     
-//     optionA: "Script tags",
-//     optionB:"Two pieces of rye bread",
-//     optionC:"Commercial breaks",
-//     optionD:"The lines",
-//     correct:"A"
-//     },
-//     {
-//     question: "A boolean is what kind of data type? ",
+    //clearInterval(timer)
+  }
+  //////////////////////////////////////////////////////////////////
+  // Arrays used to create blanks and letters on screen
+  var correctAnswers = [];
+  
+  
+  // Array of words the user will guess
+  var options= ["A","B", "C", "D",];
+  
+  // The init function is called when the page loads 
+  function init() {
+    getWins();
+    getlosses();
+  }
+  
+  // The startGame function is called when the start button is clicked
+  function startGame() {
+    isWin = false;
+    timerCount = 10;
+    // Prevents start button from being clicked when round is in progress
+    startButton.disabled = true;
+    renderBlanks()
+    startTimer()
+  }
+  
+  // The winGame function is called when the win condition is met
+  function winGame() {
+    wordBlank.textContent = "YOU WON!!!🏆 ";
+    winCounter++
+    startButton.disabled = false;
+    setWins()
+  }
+  
+  // The loseGame function is called when timer reaches 0
+  function loseGame() {
+    wordBlank.textContent = "GAME OVER";
+    loseCounter++
+    startButton.disabled = false;
+    setLosses()
+  }
+  
+  // // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
+  // function startTimer() {
+    //   // Sets timer
+    //   timer = setInterval(function() {
+      //     timerCount--;
+      //     timerElement.textContent = timerCount;
+      //     if (timerCount >= 0) {
+        //       // Tests if win condition is met
+        //       if (isWin && timerCount > 0) {
+          //         // Clears interval and stops timer
+          //         clearInterval(timer);
+          //         winGame();
+          //       }
+          //     }
+          //     // Tests if time has run out
+          //     if (timerCount === 0) {
+            //       // Clears interval
+            //       clearInterval(timer);
+    //       loseGame();
+    //     }
+    //   }, 1000);
+    // }
     
-//     optionA:"Primavera",
-//     optionB:"Primary",
-//     optionC:"Prim and proper",
-//     optionD:"Primative",
-//     correct:"D"
-// } ,  
-// {
-// question: "An oject is a data type that is a collection of: ",
-
-// optionA:"Properties",
-// optionB:"Railroads",
-// optionC:"Utilities",
-// optionD:"Hotels",
-// correct:"A"
-// },
-// {
-// question:"Use this type of operator to determine if a number is odd or even: ",
-
-// optionA:"modulus",
-// optionB:"smooth",
-// optionC:"telephone",
-// optionD:"surgeon",
-// correct:"A"
-// },
-// {
-// question:"Use this method to determine the length of an array: ",
-
-// optionA:".length",
-// optionB :".yardstick",
-// optionC:".your arm",
-// optionD:".make an educated guess",
-// correct:"A"
-// },
-// {
-// question: "What captues a chunk of code to be reused in a program?",
-
-// optionA:"federal marshall",
-// optionB:"butterfly net",
-// optionC:"function",
-// optionD:"screen shot",
-// correct:"C"
-// },
-// {
-// question: "When writing an object, be careful not to forget the:",
-
-// optionA:"commas",
-// optionB:"tickets",
-// optionC:"keys",
-// optionD:"to lock the door",
-// correct:"A"
-// },
-// {
-// question: "Which is the highest level of an objet? ",
-
-// optionA:"peak",
-// optionB:"penthouse",
-// optionC:"CEO",
-// optionD:"window",
-// correct:"D"
-// },
-// {
-// question: "An API is what? ",
-
-// optionA:"Aplication Programming Interface",
-// optionB:"Any Possible Idea",
-// optionC:"All Purple Igloos",
-// optionD:"Artfully Placed Item",
-// correct:"A"
-// },
-// {
-// question: "Week 4 homework is: ",
-
-// optionA:"Gonna be a couple days late",
-// optionB:"An exercise in futility",
-// optionC:"A valuable learning experience",
-// optionD:"A lot of redundant code",
-// correct:"C"
-// },
-// ]
-// }
+    
+    
+    
+    //////////////////////////////////////////////////////////
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    let objectQuestions=[
+      {
+        question:"You can include JavaScript on an HTML page if it is written between:",
+        
+        optionA: "Script tags",
+        optionB:"Two pieces of rye bread",
+        optionC:"Commercial breaks",
+        optionD:"The lines",
+        correct:"A"
+      },
+      {
+        question: "A boolean is what kind of data type? ",
+        
+        optionA:"Primavera",
+        optionB:"Primary",
+        optionC:"Prim and proper",
+        optionD:"Primative",
+        correct:"D"
+      } ,  
+      {
+        question: "An oject is a data type that is a collection of: ",
+        
+        optionA:"Properties",
+        optionB:"Railroads",
+        optionC:"Utilities",
+        optionD:"Hotels",
+        correct:"A"
+      },
+      {
+        question:"Use this type of operator to determine if a number is odd or even: ",
+        
+        optionA:"modulus",
+        optionB:"smooth",
+        optionC:"telephone",
+        optionD:"surgeon",
+        correct:"A"
+      },
+      {
+        question:"Use this method to determine the length of an array: ",
+        
+        optionA:".length",
+        optionB :".yardstick",
+        optionC:".your arm",
+        optionD:".make an educated guess",
+        correct:"A"
+      },
+      {
+        question: "What captues a chunk of code to be reused in a program?",
+        
+        optionA:"federal marshall",
+        optionB:"butterfly net",
+        optionC:"function",
+        optionD:"screen shot",
+        correct:"C"
+      },
+      {
+        question: "When writing an object, be careful not to forget the:",
+        
+        optionA:"commas",
+        optionB:"tickets",
+        optionC:"keys",
+        optionD:"to lock the door",
+        correct:"A"
+      },
+      {
+        question: "Which is the highest level of an objet? ",
+        
+        optionA:"peak",
+        optionB:"penthouse",
+        optionC:"CEO",
+        optionD:"window",
+        correct:"D"
+      },
+      {
+        question: "An API is what? ",
+        
+        optionA:"Aplication Programming Interface",
+        optionB:"Any Possible Idea",
+        optionC:"All Purple Igloos",
+        optionD:"Artfully Placed Item",
+        correct:"A"
+      },
+      {
+        question: "Week 4 homework is: ",
+        
+        optionA:"Gonna be a couple days late",
+        optionB:"An exercise in futility",
+        optionC:"A valuable learning experience",
+        optionD:"A lot of redundant code",
+        correct:"C"
+      },
+]
+function runQuestions(){
+  console.log(objectQuestions[0])
+  for (let i=0;i<objectQuestions.length;i++){
+  
+    var ques1TextParent=document.getElementById("question-box")//parent Element
+    var h2=document.createElement('h2')//child element Created
+    
+    console.log(ques1TextParent)
+    console.log(h2)
+    h2.innerText=objectQuestions[i].question//use a variable
+    console.log(h2.innerText)
+    ques1TextParent.appendChild(h2)
+    
+    
+    
+    var btnAEl=document.getElementById("btnA")//parent element
+    var btnAText=document.createElement('h2')
+    console.log(btnAEl)
+    console.log(btnAText)
+    btnAText.innerText= objectQuestions[i].optionA
+    btnAEl.appendChild(btnAText)
+    
+    var btnBEl=document.getElementById("btnB")
+    var btnBText=document.createElement('h2')
+    console.log(btnBEl)
+    console.log(btnBText)
+    btnBText.innerText= objectQuestions[i].optionB
+    btnBEl.appendChild(btnBText)
+    
+    var btnCEl=document.getElementById("btnC")
+    var btnCText=document.createElement('h2')
+    console.log(btnCEl)
+    console.log(btnCText)
+    btnCText.innerText= objectQuestions[i].optionC
+    btnCEl.appendChild(btnCText)
+    
+    var btnDEl=document.getElementById("btnD")
+    var btnDText=document.createElement('h2')
+    console.log(btnDEl)
+    console.log(btnDText)
+    btnDText.innerText= objectQuestions[i].optionD
+    btnDEl.appendChild(btnDText)
+    
+    
+    
+    
+  }
+}
 
 // btnStart.addEventListener('click', startQuiz)  //add event listener AND calls startQuiz()
-    
+
 
 
 // for(var i=0; i< objectQuestions.length; i++)
