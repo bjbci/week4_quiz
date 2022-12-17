@@ -1,4 +1,4 @@
-
+console.log(document.body.children)
 var highScore=0
 var newCount
 var count =0
@@ -282,7 +282,7 @@ function startTimer() {
       {
         question: "Week 4 homework is: ",
         
-        optionA:"Gonna be a couple days late",
+        optionA:"Gonna be 64 days late",
         optionB:"An exercise in futility",
         optionC:"A valuable learning experience",
         optionD:"A lot of redundant code",
@@ -304,36 +304,47 @@ function runQuestions(){
     
     
     
-    var btnAEl=document.getElementById("btnA")//parent element
-    var btnAText=document.createElement('h2')
-    console.log(btnAEl)
-    console.log(btnAText)
-    btnAText.innerText= objectQuestions[i].optionA
-    btnAEl.appendChild(btnAText)
+    // var btnAEl=document.getElementById("btnA")//parent element
+    var btnParent=document.getElementById('answers')
+    console.log(btnParent)
     
-    var btnBEl=document.getElementById("btnB")
-    var btnBText=document.createElement('h2')
-    console.log(btnBEl)
-    console.log(btnBText)
-    btnBText.innerText= objectQuestions[i].optionB
-    btnBEl.appendChild(btnBText)
-    
-    var btnCEl=document.getElementById("btnC")
-    var btnCText=document.createElement('h2')
-    console.log(btnCEl)
-    console.log(btnCText)
-    btnCText.innerText= objectQuestions[i].optionC
-    btnCEl.appendChild(btnCText)
-    
-    var btnDEl=document.getElementById("btnD")
-    var btnDText=document.createElement('h2')
-    console.log(btnDEl)
-    console.log(btnDText)
-    btnDText.innerText= objectQuestions[i].optionD
-    btnDEl.appendChild(btnDText)
+    var btnA=document.createElement('button')
+    btnA.innerText=objectQuestions[i].optionA
+
+    console.log(btnA.text)
+    btnParent.appendChild(btnA)
+    console.log(btnA)
     
     
+    // var btnBParent=document.getElementById('answers')
+    console.log(btnParent)
+    var btnB=document.createElement('button')
+    btnB.innerTextext=objectQuestions[i].optionB
+    console.log(btnB.text)
+
+    btnParent.appendChild(btnB)
+    console.log(btnB)
+
+
+    // var btnCParent=document.getElementById('answers')
+    console.log(btnParent)
+    var btnC=document.createElement('button')
+    btnC.innerText=objectQuestions[i].optionC
+    console.log(btnC.text)
+
+    btnParent.appendChild(btnC)
+    console.log(btnC)
+
+    // var btnDParent=document.getElementById('answers')
+    console.log(btnParent)
+    var btnD=document.createElement('button')
+    btnD.innerText=objectQuestions[i].optionD
+    console.log(btnD.text)
+
+    btnParent.appendChild(btnD)
+    console.log(btnD)
     
+   
     
   }
 }
