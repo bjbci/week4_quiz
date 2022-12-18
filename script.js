@@ -21,9 +21,8 @@ var btnStart = document.getElementById("btnStart").addEventListener('click',butt
 function buttonStart(){
 console.log("button START pressed")
 startQuiz()
-startTimer(
+startTimer()
 
-)
 }
  
 var btnA = document.getElementById("btnA").addEventListener('click',buttonA)
@@ -82,7 +81,7 @@ function startQuiz() {
   // Prevents start button from being clicked when round is in progress
   //btnStart.disabled = true;
   runQuestions()
-  startTimer()
+  // startTimer()
 }
 
     
@@ -123,7 +122,7 @@ function startTimer() {
   //////////////////////////////////////////////////////////////////
   // Arrays used to create blanks and letters on screen
   var correctAnswers = [];
-  
+  let playerAnswer
   
   // Array of words the user will guess
   var options= ["A","B", "C", "D",];
@@ -187,16 +186,7 @@ function startTimer() {
     
     
     //////////////////////////////////////////////////////////
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     let objectQuestions=[
       {
         question:"You can include JavaScript on an HTML page if it is written between:",
@@ -289,116 +279,58 @@ function startTimer() {
         correct:"C"
       },
 ]
+for (let i=0;i<objectQuestions.length;i++){
+  var obj=objectQuestions[i]
+  console.log(obj)
+
+var ques1TextParent=document.getElementById("question-box")//parent Element
+var h2=document.createElement('h2')//child element Created
+
+console.log(ques1TextParent)
+console.log(h2)
+h2.innerText=obj.question//use a variable
+console.log(h2.innerText)
+ques1TextParent.append(h2)
+
+////////////////////////////////////
+var btnParent=document.getElementById('answers')
+
+var btnA=document.createElement('button')
+btnA.innerText=obj.optionA
+btnParent.appendChild(btnA)
+console.log(btnA)
+
+var btnB=document.createElement('button')
+btnB.innerTextext=obj.optionB
+btnParent.appendChild(btnB)
+console.log(btnB)
+
+var btnC=document.createElement('button')
+btnC.innerText=obj.optionC
+btnParent.appendChild(btnC)
+console.log(btnC)
+
+var btnD=document.createElement('button')
+btnD.innerText=obj.optionD
+btnParent.appendChild(btnD)
+console.log(btnD) 
+
+
+if(playerAnswer===objectQuestions.correct){
+scoreCount++
+ playerAnswer
+}else{
+  alert('incorrect Answer, no points given')
+}
+}
 function runQuestions(){
-  console.log(objectQuestions[0])
-  for (let i=0;i<objectQuestions.length;i++){
+ 
   
-    var ques1TextParent=document.getElementById("question-box")//parent Element
-    var h2=document.createElement('h2')//child element Created
-    
-    console.log(ques1TextParent)
-    console.log(h2)
-    h2.innerText=objectQuestions[i].question//use a variable
-    console.log(h2.innerText)
-    ques1TextParent.appendChild(h2)
-    
-    
-    
-    // var btnAEl=document.getElementById("btnA")//parent element
-    var btnParent=document.getElementById('answers')
-    console.log(btnParent)
-    
-    var btnA=document.createElement('button')
-    btnA.innerText=objectQuestions[i].optionA
-
-    console.log(btnA.text)
-    btnParent.appendChild(btnA)
-    console.log(btnA)
-    
-    
-    // var btnBParent=document.getElementById('answers')
-    console.log(btnParent)
-    var btnB=document.createElement('button')
-    btnB.innerTextext=objectQuestions[i].optionB
-    console.log(btnB.text)
-
-    btnParent.appendChild(btnB)
-    console.log(btnB)
 
 
-    // var btnCParent=document.getElementById('answers')
-    console.log(btnParent)
-    var btnC=document.createElement('button')
-    btnC.innerText=objectQuestions[i].optionC
-    console.log(btnC.text)
-
-    btnParent.appendChild(btnC)
-    console.log(btnC)
-
-    // var btnDParent=document.getElementById('answers')
-    console.log(btnParent)
-    var btnD=document.createElement('button')
-    btnD.innerText=objectQuestions[i].optionD
-    console.log(btnD.text)
-
-    btnParent.appendChild(btnD)
-    console.log(btnD)
-    
-   
-    
-  }
 }
 
-// btnStart.addEventListener('click', startQuiz)  //add event listener AND calls startQuiz()
 
-
-
-// for(var i=0; i< objectQuestions.length; i++)
-// console.log(objectQuestions[i])
-// })
-
-// function runQuestion(){
-//     const questionbox =document.getElementById("question-box")
-// var h2=document.createElement('h2')
-// console.log(questionbox)
-// h2.innerText=objectQuestions[i]
-
-//     //objectQuestions.innerHTML= "<p>"+q.question+"<p";
-
-    
-
-//     const buttonA =document.getElementById("button-a")
-
-//     var h3=document.createElement('h3')
-//      console.log(buttonA)
-//     h3.innerText=objectQuestions[i]
-
-//     optionB.innerHTML = q.choiceB;
-
-//     const buttonB =document.getElementById("h3")
-//     var h3=document.createElement('h3')
-//     console.log(buttonB)
-//     h3.innerText=objectQuestions[i]
-   
-
-//     optionC.innerHTML = q.choiceC;
-//     const buttonC =document.getElementById("button-c")
-//     var h3=document.createElement('h3')
-//     console.log(buttonC)
-//     h3.innerText=objectQuestions[i]
-   
-
-//     optionD.innerHTML = q.choiceD;
-//     const buttonD =document.getElementById("button-d")
-//  var h3=document.createElement('h3')
-//  console.log(buttonD)
-//  h3.innerText=objectQuestions[i]
-// }
-// start.style.display="none";
-// //runningQuestion=0
-// runQuestion()
-// quiz.style.display="block";
-// runQuestion++
 
 
 

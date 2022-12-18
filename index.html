@@ -17,116 +17,64 @@
             <h1>HIGH SCORE</h1>
         </div>
        
-      
-    
-        <div class="timer-box">
-            <h1>You have 2 minutes</h1>
+       <div class="timer-box">
+            <h2>YOU HAVE 2 MINUTES TO FINISH THIS QUIZ</h2>
            
             <h2 id="counterseconds"></h2>
-            <h3>timerCount</h3>
-            <p>this is below the timer</p>
+            <!-- <h3>XXXXtimerCountXXXX IS ABOVE</h3> -->
         </div>
-    
-    
-    
-    </div>
+     </div>
 </header>
-
 
 <main>
 
-
-
-
-
-<section class="page1">
+<section id="user-score">
     <span id="user-score">0</span>
-    <div id="container">
-        
- 
+    <div id="scoreBox">
+        <h2 id="scoreBox"> FINAL SCORE  </h2> 
+    </div>
 </section>
 
 
-<div class="page2">
-    <div id="quiz" style="display:none;">
-        <div id="question">
-            <p>questions</p>
+<section class="content">
+        <div  id="question-box">question box
+            <div id="question-text"></div>
+        <div class="ABCD">
+   
+
+        <div id="options">
+            <button class="option" id="btnA"  onclick="buttonA()">A</button>
+        
+            <button class="option" id="btnB"  onclick="buttonB()">B</button>
+        
+            <button class="option" id="btnC"  onclick="buttonC()">C</button>
+        
+            <button class="option" id="btnD"  onclick="buttonD()">D</button>
+            
         </div>
 
-        <div id="timer">
-            <div id="counter">6</div>
-       
-        <div id="options">
-            <div class="option" id="btnA">A</div>
-            <div class="option" id="btnB">B</div>
-            <div class="option" id="btnC">C</div>
-            <div class="option" id="btnD">D</div>
-        </div>
+
+<button type="button" id="btnStart">Start Test</button>
+    
+</div>
+</div>
+</div>
+
+    <div class="controls">
+        <button type="button" onclick="buttonReStart()" id="btnReStart">RESTART</button>
+        <button type="button" onclick="buttonSubmit()" id="btnSubmit">SUBMIT</button>
+        <button type="button" onclick="buttonHighScore()" id="btnClrScr">CLEAR HIGH SCORE</button>
+    
     </div>
 </div>
-</div>
 
-<section class="page3">
-<div id="scoreContainer"></div>
-<h1> ALL DONE! </h1>
-<div id="scoreBox">
-<h2 > FINAL SCORE id="scoreBox"   </h2> 
-</div>
+
 </section>
-
-    <section class="content">
-    <div  id="question-box">question box
-    </div id="question-text"></div>
-    <div class="ABCD">
-        
-
-        <button type="button" id="btnStart">Start Test</button>
-    <div id="start">Start Quiz</div>
-</div>
-<ul id="answers">
-    <li id="uLBtnA">
-        <button>BTN A</button>
-    </li>
-    <li id="uLBtnB">
-        <button>BTN B</button>
-    </li>
-    <li id="uLBtnC">
-        <button>BTN C</button>
-    </li>
-    <li id="uLBtnD">
-        <button>BTN D</button>
-    </li>
-
-
-</ul>
-    <!-- <div>
-        <button type="button"id="btnA" onclick="buttonA()"></button>
-    
-        <button type="button"id="btnB"  onclick="buttonB()"></button>
-    
-        <button type="button"id="btnC" onclick="buttonC()"></button>
-    
-        <button type="button"id="btnD"  onclick="buttonD()"></button>
-    </div> -->
-</div>
-</div>
-</div>
-
-<div class="controls">
-    <button type="button" onclick="buttonReStart()" id="btnReStart">RESTART</button>
-    <button type="button" onclick="buttonSubmit()" id="btnSubmit">SUBMIT</button>
-    <button type="button" onclick="buttonHighScore()" id="btnClrScr">CLEAR HIGH SCORE</button>
-    
-</div>
-</div>
-</section>
-
-
-
-
 
 <!--enter initials into submit box-->
 </section>
+
+
 <footer class="footer">
 
 </footer>
