@@ -12,16 +12,22 @@
 
   <header>
     <div class="flex-container">
-    
-        <div class= "high-score-box"id="high-score-box">
-            <h1>HIGH SCORE</h1>
+        <div>
+            <div class= "high-score-box">
+                <div id="high-score-box">
+                    <h1>HIGH SCORE</h1>
+                </div>
+                <div id="initials-box">
+                    <h2>HIGH SCORE PLAYER INITIALS: </h2>
+                </div>
+            </div>
         </div>
        
        <div class="timer-box">
-            <h2>YOU HAVE 2 MINUTES TO FINISH THIS QUIZ</h2>
+            <h2>TIME REMAINING</h2>
            
             <h2 id="counterseconds"></h2>
-            <!-- <h3>XXXXtimerCountXXXX IS ABOVE</h3> -->
+           
         </div>
      </div>
 </header>
@@ -29,49 +35,60 @@
 <main>
 
 <section id="user-score">
-    <span id="user-score">0</span>
+    <span id="user-score"></span>
     <div id="scoreBox">
-        <h2 id="scoreBox"> FINAL SCORE  </h2> 
+        <h2 id="scoreBox"> PLAYER SCORE  </h2> 
     </div>
 </section>
 
 
 <section class="content">
-        <div  id="question-box"> 
+        <div  id="question-box">
             <div id="question-text"></div>
        </div>
 
         <div class="ABCD">
              <div id="options">
-                <button class="option" id="btnA"  onclick="buttonA()"></button>
+                 <div id="A"></div>
             
-                <button class="option" id="btnB"  onclick="buttonB()"></button>
+                <div id="B"></div>
             
-                <button class="option" id="btnC"  onclick="buttonC()"></button>
+                <div id="C"></div>
             
-                <button class="option" id="btnD"  onclick="buttonD()"></button>
+                <div id="D" value="D"></div>
              </div>
 
 
-<button type="button" id="btnStart">Start Test</button>
+<button type="button" class="btnStart">Start Test</button>
     
-<!-- </div> -->
 </div>
 </div>
-
     <div class="controls">
-        <button type="button" onclick="buttonReStart()" id="btnReStart">RESTART</button>
-        <button type="button" onclick="buttonSubmit()" id="btnSubmit">SUBMIT</button>
-        <button type="button" onclick="buttonHighScore()" id="btnClrScr">CLEAR HIGH SCORE</button>
-    
+        <button type="button" id="btnReStart">RESTART</button>
+        <button type="button" id="btnSubmit">SUBMIT</button>
+        <button type="button" id="btnClrScr">CLEAR HIGH SCORE</button>
+        <!-- onclick="buttonReStart()"
+        onclick="buttonSubmit()"
+        onclick="buttonHighScore()"  -->
     </div>
 </div>
-
-
 </section>
 
 <!--enter initials into submit box-->
-</section>
+<div class="clearfix">
+    <div class="card">
+      <h2>ENTER YOUR INITIALS</h2>
+      <form method="POST">
+        <div class="input-group">
+          <label for="text">initials</label>
+          <input type="text" name="initialsForm" id="initialsForm" placeholder="lbj" />
+        </div>
+      
+        <div id="msg"></div>
+        <button id="submit-initials">Submit initials</button>
+      </form>
+    </div>
+
 
 
 <footer class="footer">
